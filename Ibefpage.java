@@ -18,6 +18,11 @@ public class Ibefpage {
 		
 		//Select salu= new Select(driver.findElement(By.className("jqTransformSelectOpen")));
 		//salu.selectByIndex(2);
+		Thread.sleep(500);
+//		driver.findElement(By.className("jqTransformSelectOpen")).click();
+		driver.findElement(By.xpath("//*[@id=\"userSignUpForm\"]/div/div/div[1]/ul/li[1]/div/div")).click();
+		Thread.sleep(500);
+		driver.findElement(By.linkText("Miss")).click();
 		
 		driver.findElement(By.id("signupFname")).sendKeys("Sneha");
 		Thread.sleep(500);
@@ -25,7 +30,7 @@ public class Ibefpage {
 		driver.findElement(By.id("signupLname")).sendKeys("Anand");
 		Thread.sleep(500);
 		
-		driver.findElement(By.xpath("//*[@id=\"userSignUpForm\"]/div/div/div[2]/ul[1]/li/span[2]/span/a")).click();
+		driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[2]/div/div/form/div/div/div[2]/ul[1]/li/span[2]/span/a")).click();
 		Thread.sleep(500);
 		
 		driver.findElement(By.id("signupEmail")).sendKeys("sneh23@gmail.com");
@@ -36,7 +41,7 @@ public class Ibefpage {
 		
 		driver.findElement(By.id("signupCPassword")).sendKeys("trial@123");
 		Thread.sleep(500);
-		
+	
 		driver.findElement(By.id("signupUserOrg")).sendKeys("LTTS");
 		Thread.sleep(500);
 		
@@ -46,11 +51,12 @@ public class Ibefpage {
 		//driver.findElement(By.className("jqTransformSelectWrapper"));
 		//Thread.sleep(500);
 		
-		Select country= new Select(driver.findElement(By.id("signupUserCountry")));
-		country.selectByIndex(2);
-		
-		//driver.findElement(By.id("submitSignUpForm")).click();
-		driver.findElement(By.xpath("//*[@id=\"submitSignUpForm\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"userSignUpForm\"]/div/div/div[2]/ul[2]/li[6]/div/div/a")).click();
 		Thread.sleep(500);
+		driver.findElement(By.linkText("India")).click();
+		
+		driver.findElement(By.id("submitSignUpForm")).click();
+		
 }
 }
+
