@@ -62,7 +62,7 @@ public static void main(String[] args) throws InterruptedException {
 		
 		//car model 
 		WebElement model=driver.findElement(By.id("CAR_MODEL_NAME"));
-		model.sendKeys("Hyundai VENUE");
+		model.sendKeys("Hyundai Creta");
 		Thread.sleep(500);
 		model.sendKeys(Keys.ARROW_DOWN);
 		Thread.sleep(500);
@@ -83,7 +83,13 @@ public static void main(String[] args) throws InterruptedException {
 		
 		//WebElement year=driver.findElement(By.id("yrspan_manufact"));
 		driver.findElement(By.id("yrspan_manufact")).click();
-		driver.findElement(By.linkText("2021")).click();
+		driver.findElement(By.linkText("2020")).click();
+		
+		//month of manufacture
+		
+		//WebElement year=driver.findElement(By.id("yrspan_manufact"));
+		driver.findElement(By.id("mnthspan_yr")).click();
+		driver.findElement(By.linkText("Sept")).click();
 		
 		//ownership
 		driver.findElement(By.id("NOV_totalworkexp")).click();
@@ -98,8 +104,9 @@ public static void main(String[] args) throws InterruptedException {
 		business.sendKeys("LARSEN AND TOUBRO");
 		Thread.sleep(500);
 		
-		//name of business
-		driver.findElement(By.xpath("/html/body/div/div[2]/div/div[4]/div/div/i/div/div[5]/div[2]/div/div[2]/label")).click();
+		//type of business
+		driver.findElement(By.id("Nobspan")).click();
+		driver.findElement(By.linkText("SERVICES")).click();
 		
 		
 		//year of emp
