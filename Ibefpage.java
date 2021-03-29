@@ -55,6 +55,7 @@ public class Ibefpage {
 		Thread.sleep(500);
 		driver.findElement(By.linkText("India")).click();
 		
+		driver.findElement(By.xpath("//*[@id=\"userSignUpForm\"]/div/div/div[2]/ul[2]/li[8]/span[1]/a")).click();
 		driver.findElement(By.id("submitSignUpForm")).click();
 		
 }
